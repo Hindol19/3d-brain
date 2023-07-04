@@ -65,17 +65,6 @@ export default class SceneInit {
 
     // if window resizes
     window.addEventListener("resize", () => this.onWindowResize(), false);
-
-    // NOTE: Load space background.
-    // this.loader = new THREE.TextureLoader();
-    // this.scene.background = this.loader.load('./pics/space.jpeg');
-
-    // NOTE: Declare uniforms to pass into glsl shaders.
-    // this.uniforms = {
-    //   u_time: { type: 'f', value: 1.0 },
-    //   colorB: { type: 'vec3', value: new THREE.Color(0xfff000) },
-    //   colorA: { type: 'vec3', value: new THREE.Color(0xffffff) },
-    // };
   }
 
   animate() {
