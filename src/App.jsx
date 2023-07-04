@@ -21,13 +21,13 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load("./assets/shiba/scene.gltf", (gltfScene) => {
+    glftLoader.load("./assets/brain/scene.gltf", (gltfScene) => {
       loadedModel = gltfScene;
       // console.log(loadedModel);
 
       gltfScene.scene.rotation.y = Math.PI / 8;
-      gltfScene.scene.position.y = 3;
-      gltfScene.scene.scale.set(10, 10, 10);
+      // gltfScene.scene.position.y = -90;
+      gltfScene.scene.scale.set(2, 2, 2);
       test.scene.add(gltfScene.scene);
     });
 

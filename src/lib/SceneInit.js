@@ -33,7 +33,7 @@ export default class SceneInit {
       1,
       1000
     );
-    this.camera.position.z = 48;
+    this.camera.position.z = 648;
 
     // NOTE: Specify a canvas which is already created in the HTML.
     const canvas = document.getElementById(this.canvasId);
@@ -57,7 +57,7 @@ export default class SceneInit {
     this.scene.add(this.ambientLight);
 
     // directional light - parallel sun rays
-    this.directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+    this.directionalLight = new THREE.DirectionalLight(0xaf07e8, 2);
     // this.directionalLight.castShadow = true;
     this.directionalLight.position.set(0, 32, 64);
     this.scene.add(this.directionalLight);
