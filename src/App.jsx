@@ -5,6 +5,7 @@ import * as THREE from "three";
 // import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 // import { VOXLoader } from 'three/examples/jsm/loaders/VOXLoader';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 
 import SceneInit from "./lib/SceneInit";
 
@@ -21,12 +22,12 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load("./assets/brain/scene.gltf", (gltfScene) => {
+    glftLoader.load("./assets/brain3/scene.glb", (gltfScene) => {
       loadedModel = gltfScene;
       // console.log(loadedModel);
 
-      gltfScene.scene.rotation.y = Math.PI / 8;
-      // gltfScene.scene.position.y = -90;
+      // gltfScene.scene.rotation.y = Math.PI / 8;
+      // gltfScene.scene.position.y = 10;
       gltfScene.scene.scale.set(2, 2, 2);
       test.scene.add(gltfScene.scene);
     });
@@ -34,7 +35,7 @@ function App() {
     const animate = () => {
       if (loadedModel) {
         // loadedModel.scene.rotation.x += 0.01;
-        loadedModel.scene.rotation.y += 0.01;
+        loadedModel.scene.rotation.y += 0.02;
         // loadedModel.scene.rotation.z += 0.01;
       }
       requestAnimationFrame(animate);

@@ -1,6 +1,6 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import Stats from 'three/examples/jsm/libs/stats.module';
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import Stats from "three/examples/jsm/libs/stats.module";
 
 export default class SceneInit {
   constructor(canvasId) {
@@ -33,7 +33,8 @@ export default class SceneInit {
       1,
       1000
     );
-    this.camera.position.z = 648;
+    this.camera.position.z = 848;
+    // this.camera.position.x = 0;
 
     // NOTE: Specify a canvas which is already created in the HTML.
     const canvas = document.getElementById(this.canvasId);
@@ -57,13 +58,13 @@ export default class SceneInit {
     this.scene.add(this.ambientLight);
 
     // directional light - parallel sun rays
-    this.directionalLight = new THREE.DirectionalLight(0xaf07e8, 2);
+    this.directionalLight = new THREE.DirectionalLight(0xffffff, 2);
     // this.directionalLight.castShadow = true;
     this.directionalLight.position.set(0, 32, 64);
     this.scene.add(this.directionalLight);
 
     // if window resizes
-    window.addEventListener('resize', () => this.onWindowResize(), false);
+    window.addEventListener("resize", () => this.onWindowResize(), false);
 
     // NOTE: Load space background.
     // this.loader = new THREE.TextureLoader();
