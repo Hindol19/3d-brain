@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 import * as THREE from "three";
 // import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
@@ -7,6 +7,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 
+// import brain from "@/assets/brain3/scene.glb";
+const Brain = "./assets/brain3/scene.glb";
 import SceneInit from "./lib/SceneInit";
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load("./assets/brain3/scene.glb", (gltfScene) => {
+    glftLoader.load(Brain, (gltfScene) => {
       loadedModel = gltfScene;
       // console.log(loadedModel);
 
